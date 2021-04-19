@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activities.PostDetailActivity">
+    android:background="@color/lynx_white"
+    tools:context=".ui.destination.DestinationDetailActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,70 +14,57 @@
         <ImageView
             android:id="@+id/content_img"
             android:layout_width="match_parent"
-            android:layout_height="250dp"
+            android:layout_height="200dp"
             android:scaleType="fitXY"
             android:src="@color/black" />
 
         <TextView
-            android:id="@+id/content_title"
+            android:id="@+id/content_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/dimen_16dp"
-            android:layout_marginTop="@dimen/dimen_8dp"
-            android:layout_marginRight="@dimen/dimen_16dp"
-            android:layout_marginBottom="@dimen/dimen_8dp"
-            android:padding="8dp"
+            android:layout_margin="@dimen/dimen_24dp"
             android:text="@string/title"
-            android:textColor="@color/black"
-            android:textSize="22sp"
-            android:textStyle="bold" />
-
-        <View
-            android:layout_width="wrap_content"
-            android:layout_height="1dp"
-            android:layout_marginLeft="@dimen/dimen_16dp"
-            android:layout_marginRight="@dimen/dimen_16dp"
-            android:layout_marginBottom="@dimen/dimen_8dp"
-            android:background="@color/black" />
+            android:textColor="@color/blue_night"
+            android:textSize="22sp" />
 
         <TextView
             android:id="@+id/content_location"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/dimen_16dp"
-            android:layout_marginRight="@dimen/dimen_16dp"
+            android:layout_marginLeft="@dimen/dimen_24dp"
+            android:layout_marginRight="@dimen/dimen_24dp"
             android:layout_marginBottom="@dimen/dimen_8dp"
-            android:drawableLeft="@drawable/ic_location_24dp"
-            android:drawablePadding="4dp"
-            android:textSize="12sp"
             android:gravity="center_vertical"
-            android:text="@string/location" />
+            android:text="@string/location"
+            android:textColor="@color/concrete"
+            android:textSize="12sp" />
 
         <TextView
-            android:id="@+id/content_info"
+            android:id="@+id/content_article"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/dimen_16dp"
-            android:layout_marginRight="@dimen/dimen_16dp"
-            android:layout_marginBottom="@dimen/dimen_16dp"
+            android:layout_marginLeft="@dimen/dimen_24dp"
+            android:layout_marginRight="@dimen/dimen_24dp"
+            android:layout_marginBottom="@dimen/dimen_24dp"
             android:lineSpacingExtra="4dp"
-            android:textColor="@color/black"
-            android:padding="@dimen/dimen_8dp"
-            android:text="@string/LoremIpsum" />
+            android:text="@string/LoremIpsum"
+            android:textColor="@color/blue_night"
+            android:textSize="13sp" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/dimen_16dp"
-            android:layout_marginRight="@dimen/dimen_16dp"
-            android:padding="8dp"
-            android:textSize="12sp"
-            android:text="@string/information"/>
+            android:layout_marginLeft="@dimen/dimen_24dp"
+            android:layout_marginRight="@dimen/dimen_24dp"
+            android:text="@string/information"
+            android:textColor="@color/concrete"
+            android:textSize="14sp" />
 
         <TableLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
+            android:layout_marginLeft="@dimen/dimen_24dp"
+            android:layout_marginRight="@dimen/dimen_24dp"
             android:layout_marginBottom="8dp"
             android:padding="8dp">
 
@@ -88,19 +75,21 @@
 
                 <TextView
                     style="@style/TextSpec.Field"
-                    android:text="@string/open"/>
+                    android:text="@string/open" />
+
                 <TextView
-                    android:id="@+id/content_jam"
+                    android:id="@+id/content_time"
                     style="@style/TextSpec.Value"
-                    android:text="@string/time"/>
+                    android:text="@string/time" />
             </TableRow>
 
         </TableLayout>
+
         <TableLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
+            android:layout_marginLeft="@dimen/dimen_24dp"
+            android:layout_marginRight="@dimen/dimen_24dp"
             android:layout_marginBottom="8dp"
             android:padding="8dp">
 
@@ -111,19 +100,20 @@
 
                 <TextView
                     style="@style/TextSpec.Field"
-                    android:text="@string/fasilitas"/>
+                    android:text="@string/fasilitas" />
+
                 <TextView
-                    android:id="@+id/content_fasilitas"
+                    android:id="@+id/content_facilities"
                     style="@style/TextSpec.Value"
-                    android:text="@string/LoremIpsum"/>
+                    android:text="@string/LoremIpsum" />
             </TableRow>
         </TableLayout>
 
         <TableLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
+            android:layout_marginLeft="@dimen/dimen_24dp"
+            android:layout_marginRight="@dimen/dimen_24dp"
             android:layout_marginBottom="8dp"
             android:padding="8dp">
 
@@ -134,11 +124,12 @@
 
                 <TextView
                     style="@style/TextSpec.Field"
-                    android:text="@string/Address"/>
+                    android:text="@string/Address" />
+
                 <TextView
                     android:id="@+id/content_address"
                     style="@style/TextSpec.Value"
-                    android:text="@string/LoremIpsum"/>
+                    android:text="@string/LoremIpsum" />
             </TableRow>
         </TableLayout>
 
@@ -146,9 +137,10 @@
             android:id="@+id/btn_url"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:background="@drawable/buttonshape"
-            android:textColor="@color/grey"
-            android:text="@string/check_location"/>
+            android:layout_margin="24dp"
+            android:background="@drawable/btn_custom"
+            android:text="@string/check_location"
+            android:textColor="@color/lynx_white" />
     </LinearLayout>
-</ScrollView>
+
+</android.support.v4.widget.NestedScrollView>

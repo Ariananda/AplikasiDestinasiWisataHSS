@@ -1,4 +1,4 @@
-package com.example.aplikasidestinasiwisata;
+package com.aria.aplikasidestinasiwisata;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

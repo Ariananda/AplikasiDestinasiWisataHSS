@@ -1,4 +1,4 @@
-package com.example.aplikasidestinasiwisata;
+package com.aria.aplikasidestinasiwisata;
 
 import org.junit.Test;
 

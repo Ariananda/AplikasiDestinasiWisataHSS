@@ -1,12 +1,20 @@
-package com.example.aplikasidestinasiwisata.Model;
+package com.aria.aplikasidestinasiwisata.data.model;
 
 import android.os.Parcel;
 import android.os.Parcelable;
 
 public class Destination implements Parcelable {
-    private String name,location,photo,article,time,fasiltas, address,url;
+    private String name, location, photo, article, time, facilities, address, mapUrl;
 
-    public Destination() {
+    public Destination(String name, String location, String photo, String article, String time, String facilities, String address, String mapUrl) {
+        this.name = name;
+        this.location = location;
+        this.photo = photo;
+        this.article = article;
+        this.time = time;
+        this.facilities = facilities;
+        this.address = address;
+        this.mapUrl = mapUrl;
     }
 
     protected Destination(Parcel in) {
@@ -15,9 +23,9 @@ public class Destination implements Parcelable {
         photo = in.readString();
         article = in.readString();
         time = in.readString();
-        fasiltas = in.readString();
+        facilities = in.readString();
         address = in.readString();
-        url = in.readString();
+        mapUrl = in.readString();
     }
 
     public static final Creator<Destination> CREATOR = new Creator<Destination>() {
@@ -32,12 +40,12 @@ public class Destination implements Parcelable {
         }
     };
 
-    public String getFasiltas() {
-        return fasiltas;
+    public String getFacilities() {
+        return facilities;
     }
 
-    public void setFasiltas(String fasiltas) {
-        this.fasiltas = fasiltas;
+    public void setFacilities(String facilities) {
+        this.facilities = facilities;
     }
 
     public String getTime() {
@@ -56,12 +64,12 @@ public class Destination implements Parcelable {
         this.address = address;
     }
 
-    public String getUrl() {
-        return url;
+    public String getMapUrl() {
+        return mapUrl;
     }
 
-    public void setUrl(String url) {
-        this.url = url;
+    public void setMapUrl(String mapUrl) {
+        this.mapUrl = mapUrl;
     }
 
     public String getArticle() {
@@ -108,8 +116,8 @@ public class Destination implements Parcelable {
         dest.writeString(this.photo);
         dest.writeString(this.article);
         dest.writeString(this.time);
-        dest.writeString(this.fasiltas);
+        dest.writeString(this.facilities);
         dest.writeString(this.address);
-        dest.writeString(this.url);
+        dest.writeString(this.mapUrl);
     }
 }
